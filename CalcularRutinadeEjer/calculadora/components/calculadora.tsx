@@ -1,13 +1,10 @@
 import { View, Text } from "react-native";
 import { rutinaEjer } from "../services/logica";
 
-export default function Calculadora() {
-
-  const result = rutinaEjer([3, 0, 2, 4.5, 0, 3, 1], 2);
-
+export default function Calculadora(props: ReturnType<typeof rutinaEjer>) {
   return (
     <View>
-      <Text>Promedio: {result.average}</Text>
+      <Text>Promedio: {props.average}</Text>
     </View>
   );
 }
